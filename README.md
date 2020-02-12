@@ -27,13 +27,6 @@
 - Project and API's showcase
 - Start thinking with your partner the app you will implement in project 2
 
-# Next - day w5d4
-
-- ChartJS - micro learning
-- Continue thinking with your partner the app you will implement in project 2
-- Design and / or find the API you want to use
-- File Upload with and without a CDN
-
 # Goals
 
 - Practise in class (by yourself) creating a rollercoaster CRUD application
