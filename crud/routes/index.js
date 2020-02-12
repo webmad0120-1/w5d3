@@ -2,6 +2,10 @@ const express = require("express");
 const router = express.Router();
 const Movies = require("../models/Movies");
 
+router.get("/", (req, res) => {
+  res.render("index");
+});
+
 router.get("/movies", (req, res, next) => {
   Movies.find().then(allMovies => res.json(allMovies));
 });
@@ -21,7 +25,9 @@ router.put("/movie/:id", (req, res, next) => {
 });
 
 router.delete("/movie/:id", (req, res, next) => {
-  Movies.findByIdAndDelete(req.params.id).then(() => res.redirect("/movies"));
+  Movies.findByIdAndDelete(req.params.id).then(() => {
+    res.json({ deleted: true, _id: req.params.id });
+  });
 });
 
 module.exports = router;
